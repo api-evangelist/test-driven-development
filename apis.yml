@@ -1,4 +1,4 @@
-name: Test-driven Development
+name: Test-Driven Development
 description: A software development approach where tests are written before the actual
   code, following a red-green-refactor cycle to ensure code quality and maintainability.
   It supports the full software development lifecycle from design through deployment
