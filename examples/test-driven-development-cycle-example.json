@@ -1,0 +1,14 @@
+{
+  "id": "sample-id",
+  "phase": "refactor",
+  "test_name": "Sample Test Name",
+  "test_description": "This is a sample test description.",
+  "test_code": "sample-test-code",
+  "implementation_code": "sample-implementation-code",
+  "refactored_code": "sample-refactored-code",
+  "test_status": "passing",
+  "language": "JavaScript",
+  "framework": "Jest",
+  "commit_hash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "created_at": "2025-03-15T14:30:00Z"
+}

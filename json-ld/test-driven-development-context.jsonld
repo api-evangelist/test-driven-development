@@ -1,0 +1,164 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "schema": "https://schema.org/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "testdrivendevelopment": "https://api-evangelist.github.io/test-driven-development/schema/",
+    "CoverageReport": "testdrivendevelopment:CoverageReport",
+    "TDDCycle": "testdrivendevelopment:TDDCycle",
+    "TestSpec": "testdrivendevelopment:TestSpec",
+    "assertions": {
+      "@id": "testdrivendevelopment:assertions",
+      "@container": "@set"
+    },
+    "branch": {
+      "@id": "testdrivendevelopment:branch",
+      "@type": "xsd:string"
+    },
+    "branchesPct": {
+      "@id": "testdrivendevelopment:branches_pct",
+      "@type": "xsd:decimal"
+    },
+    "buildId": {
+      "@id": "testdrivendevelopment:build_id",
+      "@type": "xsd:string"
+    },
+    "commitHash": {
+      "@id": "testdrivendevelopment:commit_hash",
+      "@type": "xsd:string"
+    },
+    "context": {
+      "@id": "testdrivendevelopment:context",
+      "@type": "xsd:string"
+    },
+    "createdAt": {
+      "@id": "schema:dateCreated"
+    },
+    "describe": {
+      "@id": "testdrivendevelopment:describe",
+      "@type": "xsd:string"
+    },
+    "expected": {
+      "@id": "testdrivendevelopment:expected"
+    },
+    "filePath": {
+      "@id": "testdrivendevelopment:file_path",
+      "@type": "xsd:string"
+    },
+    "files": {
+      "@id": "testdrivendevelopment:files",
+      "@container": "@set"
+    },
+    "framework": {
+      "@id": "testdrivendevelopment:framework",
+      "@type": "xsd:string"
+    },
+    "functionsPct": {
+      "@id": "testdrivendevelopment:functions_pct",
+      "@type": "xsd:decimal"
+    },
+    "generatedAt": {
+      "@id": "testdrivendevelopment:generated_at",
+      "@type": "xsd:dateTime"
+    },
+    "given": {
+      "@id": "testdrivendevelopment:given",
+      "@type": "xsd:string"
+    },
+    "id": {
+      "@id": "dcterms:identifier"
+    },
+    "implementationCode": {
+      "@id": "testdrivendevelopment:implementation_code",
+      "@type": "xsd:string"
+    },
+    "itShould": {
+      "@id": "testdrivendevelopment:it_should",
+      "@type": "xsd:string"
+    },
+    "language": {
+      "@id": "testdrivendevelopment:language",
+      "@type": "xsd:string"
+    },
+    "linesCovered": {
+      "@id": "testdrivendevelopment:lines_covered",
+      "@type": "xsd:integer"
+    },
+    "linesPct": {
+      "@id": "testdrivendevelopment:lines_pct",
+      "@type": "xsd:decimal"
+    },
+    "linesTotal": {
+      "@id": "testdrivendevelopment:lines_total",
+      "@type": "xsd:integer"
+    },
+    "message": {
+      "@id": "testdrivendevelopment:message",
+      "@type": "xsd:string"
+    },
+    "name": {
+      "@id": "schema:name"
+    },
+    "phase": {
+      "@id": "testdrivendevelopment:phase",
+      "@type": "xsd:string"
+    },
+    "project": {
+      "@id": "testdrivendevelopment:project",
+      "@type": "xsd:string"
+    },
+    "refactoredCode": {
+      "@id": "testdrivendevelopment:refactored_code",
+      "@type": "xsd:string"
+    },
+    "statementsPct": {
+      "@id": "testdrivendevelopment:statements_pct",
+      "@type": "xsd:decimal"
+    },
+    "status": {
+      "@id": "testdrivendevelopment:status",
+      "@type": "xsd:string"
+    },
+    "summary": {
+      "@id": "testdrivendevelopment:summary"
+    },
+    "tags": {
+      "@id": "testdrivendevelopment:tags",
+      "@container": "@set",
+      "@type": "xsd:string"
+    },
+    "testCode": {
+      "@id": "testdrivendevelopment:test_code",
+      "@type": "xsd:string"
+    },
+    "testDescription": {
+      "@id": "testdrivendevelopment:test_description",
+      "@type": "xsd:string"
+    },
+    "testName": {
+      "@id": "testdrivendevelopment:test_name",
+      "@type": "xsd:string"
+    },
+    "testStatus": {
+      "@id": "testdrivendevelopment:test_status",
+      "@type": "xsd:string"
+    },
+    "then": {
+      "@id": "testdrivendevelopment:then",
+      "@type": "xsd:string"
+    },
+    "tool": {
+      "@id": "testdrivendevelopment:tool",
+      "@type": "xsd:string"
+    },
+    "type": {
+      "@id": "testdrivendevelopment:type",
+      "@type": "xsd:string"
+    },
+    "when": {
+      "@id": "testdrivendevelopment:when",
+      "@type": "xsd:string"
+    }
+  }
+}

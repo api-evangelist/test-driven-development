@@ -1,0 +1,22 @@
+{
+  "id": "sample-id",
+  "project": "sample-project",
+  "commit_hash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "branch": "main",
+  "build_id": "build-001",
+  "summary": {
+    "lines_pct": 26.17,
+    "branches_pct": 65.08,
+    "functions_pct": 16.06,
+    "statements_pct": 71.4,
+    "lines_total": 8,
+    "lines_covered": 72
+  },
+  "files": [
+    {},
+    {},
+    {}
+  ],
+  "generated_at": "2025-03-15T14:30:00Z",
+  "tool": "sample-tool"
+}

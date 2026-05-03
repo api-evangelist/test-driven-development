@@ -1,0 +1,108 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/test-driven-development/refs/heads/main/json-structure/test-driven-development-test-spec-structure.json",
+  "name": "TestSpec",
+  "description": "A test specification written as part of TDD, defining the expected behavior of a unit before implementation.",
+  "properties": {
+    "id": {
+      "description": "Unique identifier for the test specification.",
+      "type": "string"
+    },
+    "name": {
+      "description": "Descriptive name of the test specification.",
+      "type": "string"
+    },
+    "describe": {
+      "description": "The subject under test described in the outermost describe block.",
+      "type": "string"
+    },
+    "context": {
+      "description": "The specific scenario or context being tested.",
+      "type": "string"
+    },
+    "it_should": {
+      "description": "The expected behavior expressed as it should... statement.",
+      "type": "string"
+    },
+    "given": {
+      "description": "Given precondition for BDD-style specs.",
+      "type": "string"
+    },
+    "when": {
+      "description": "When action for BDD-style specs.",
+      "type": "string"
+    },
+    "then": {
+      "description": "Then expected outcome for BDD-style specs.",
+      "type": "string"
+    },
+    "assertions": {
+      "items": {
+        "$ref": "#/definitions/Assertion"
+      },
+      "description": "List of assertions that must pass for the spec to be satisfied.",
+      "type": "array"
+    },
+    "tags": {
+      "items": {
+        "type": "string"
+      },
+      "description": "Tags for filtering and organizing specs.",
+      "type": "array"
+    },
+    "language": {
+      "description": "Programming language of the test spec.",
+      "type": "string"
+    },
+    "framework": {
+      "description": "Testing framework the spec is written for.",
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "pending",
+        "passing",
+        "failing",
+        "skipped"
+      ],
+      "description": "Current execution status of the spec.",
+      "type": "string"
+    }
+  },
+  "required": [
+    "id",
+    "name",
+    "it_should"
+  ],
+  "definitions": {
+    "Assertion": {
+      "properties": {
+        "type": {
+          "enum": [
+            "equals",
+            "contains",
+            "matches",
+            "throws",
+            "resolves",
+            "rejects"
+          ],
+          "description": "Type of assertion.",
+          "type": "string"
+        },
+        "expected": {
+          "description": "The expected value for the assertion."
+        },
+        "message": {
+          "description": "Failure message shown when the assertion fails.",
+          "type": "string"
+        }
+      },
+      "required": [
+        "type"
+      ],
+      "type": "object",
+      "name": "Assertion"
+    }
+  },
+  "type": "object"
+}

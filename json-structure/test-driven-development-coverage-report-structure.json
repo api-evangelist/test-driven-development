@@ -1,0 +1,123 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/test-driven-development/refs/heads/main/json-structure/test-driven-development-coverage-report-structure.json",
+  "name": "CoverageReport",
+  "description": "A code coverage report produced after running a TDD test suite, showing the percentage of code lines, branches, and functions covered by tests.",
+  "properties": {
+    "id": {
+      "description": "Unique identifier for the coverage report.",
+      "type": "string"
+    },
+    "project": {
+      "description": "Name of the project or repository this coverage report applies to.",
+      "type": "string"
+    },
+    "commit_hash": {
+      "description": "Git commit hash for which this coverage was measured.",
+      "type": "string"
+    },
+    "branch": {
+      "description": "Git branch name.",
+      "type": "string"
+    },
+    "build_id": {
+      "description": "CI build identifier associated with this coverage report.",
+      "type": "string"
+    },
+    "summary": {
+      "$ref": "#/definitions/CoverageSummary",
+      "description": "Overall coverage statistics for the project."
+    },
+    "files": {
+      "items": {
+        "$ref": "#/definitions/FileCoverage"
+      },
+      "description": "Per-file coverage breakdown.",
+      "type": "array"
+    },
+    "generated_at": {
+      "description": "ISO 8601 timestamp when the coverage report was generated.",
+      "type": "datetime"
+    },
+    "tool": {
+      "description": "Coverage tool used to generate the report (e.g., Istanbul, JaCoCo, coverage.py).",
+      "type": "string"
+    }
+  },
+  "required": [
+    "id",
+    "project",
+    "summary",
+    "generated_at"
+  ],
+  "definitions": {
+    "CoverageSummary": {
+      "properties": {
+        "lines_pct": {
+          "minimum": 0,
+          "maximum": 100,
+          "description": "Percentage of code lines covered by tests.",
+          "type": "double"
+        },
+        "branches_pct": {
+          "minimum": 0,
+          "maximum": 100,
+          "description": "Percentage of code branches covered by tests.",
+          "type": "double"
+        },
+        "functions_pct": {
+          "minimum": 0,
+          "maximum": 100,
+          "description": "Percentage of functions covered by tests.",
+          "type": "double"
+        },
+        "statements_pct": {
+          "minimum": 0,
+          "maximum": 100,
+          "description": "Percentage of statements covered by tests.",
+          "type": "double"
+        },
+        "lines_total": {
+          "description": "Total number of executable lines.",
+          "type": "int32"
+        },
+        "lines_covered": {
+          "description": "Number of executable lines covered by tests.",
+          "type": "int32"
+        }
+      },
+      "required": [
+        "lines_pct"
+      ],
+      "type": "object",
+      "name": "CoverageSummary"
+    },
+    "FileCoverage": {
+      "properties": {
+        "file_path": {
+          "description": "Relative path to the source file.",
+          "type": "string"
+        },
+        "lines_pct": {
+          "minimum": 0,
+          "maximum": 100,
+          "description": "Line coverage percentage for this file.",
+          "type": "double"
+        },
+        "branches_pct": {
+          "minimum": 0,
+          "maximum": 100,
+          "description": "Branch coverage percentage for this file.",
+          "type": "double"
+        }
+      },
+      "required": [
+        "file_path",
+        "lines_pct"
+      ],
+      "type": "object",
+      "name": "FileCoverage"
+    }
+  },
+  "type": "object"
+}

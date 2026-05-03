@@ -1,0 +1,72 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/test-driven-development/refs/heads/main/json-structure/test-driven-development-cycle-structure.json",
+  "name": "TDDCycle",
+  "description": "A single red-green-refactor iteration in the test-driven development cycle, tracking the failing test, implementation, and refactoring steps.",
+  "properties": {
+    "id": {
+      "description": "Unique identifier for the TDD cycle.",
+      "type": "string"
+    },
+    "phase": {
+      "enum": [
+        "red",
+        "green",
+        "refactor"
+      ],
+      "description": "Current phase of the TDD red-green-refactor cycle.",
+      "type": "string"
+    },
+    "test_name": {
+      "description": "Name of the test written in the red phase.",
+      "type": "string"
+    },
+    "test_description": {
+      "description": "Description of what behavior the test specifies.",
+      "type": "string"
+    },
+    "test_code": {
+      "description": "The test code written to define the expected behavior.",
+      "type": "string"
+    },
+    "implementation_code": {
+      "description": "The minimal implementation code written to make the test pass in the green phase.",
+      "type": "string"
+    },
+    "refactored_code": {
+      "description": "The improved code produced in the refactor phase while keeping tests passing.",
+      "type": "string"
+    },
+    "test_status": {
+      "enum": [
+        "failing",
+        "passing"
+      ],
+      "description": "Whether the test is currently failing or passing.",
+      "type": "string"
+    },
+    "language": {
+      "description": "Programming language used (e.g., JavaScript, Python, Java, Ruby).",
+      "type": "string"
+    },
+    "framework": {
+      "description": "Testing framework used (e.g., Jest, pytest, JUnit, RSpec).",
+      "type": "string"
+    },
+    "commit_hash": {
+      "description": "Git commit hash associated with this TDD cycle step.",
+      "type": "string"
+    },
+    "created_at": {
+      "description": "ISO 8601 timestamp when this TDD cycle was recorded.",
+      "type": "datetime"
+    }
+  },
+  "required": [
+    "id",
+    "phase",
+    "test_name",
+    "test_status"
+  ],
+  "type": "object"
+}

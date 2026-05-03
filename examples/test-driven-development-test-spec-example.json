@@ -1,0 +1,22 @@
+{
+  "id": "sample-id",
+  "name": "Sample Name",
+  "describe": "sample-describe",
+  "context": "sample-context",
+  "it_should": "sample-it-should",
+  "given": "sample-given",
+  "when": "sample-when",
+  "then": "sample-then",
+  "assertions": [
+    {},
+    {},
+    {}
+  ],
+  "tags": [
+    "sample-tags-item",
+    "sample-tags-item"
+  ],
+  "language": "JavaScript",
+  "framework": "Jest",
+  "status": "failing"
+}
