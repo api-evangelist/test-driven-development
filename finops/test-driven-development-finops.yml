@@ -1,0 +1,179 @@
+specification: FinOps Framework
+specificationVersion: '1.0'
+alignedWith:
+  framework: FinOps Foundation Framework
+  frameworkUrl: https://www.finops.org/framework/
+  dataSpec: FOCUS
+  dataSpecVersion: '1.3'
+  dataSpecUrl: https://focus.finops.org/focus-specification/v1-3/
+provider: Test-Driven Development
+providerId: test-driven-development
+publisherName: Test-Driven Development
+serviceCategory: API
+created: '2026-05-04'
+modified: '2026-05-04'
+tags:
+  - Agile
+  - Best Practices
+  - Continuous Integration
+  - Extreme Programming
+  - Methodology
+  - Software Development
+  - Testing
+  - FinOps
+  - Cost Management
+  - FOCUS
+description: FinOps framework definition for the Test-Driven Development API surface. Provides a FOCUS-aligned
+  mapping for cost allocation, usage measurement, and unit-economics reporting across the provider's APIs.
+principles:
+  - name: Visibility
+    description: Make API consumption costs visible to engineering, product, and finance teams in near
+      real-time.
+  - name: Allocation
+    description: Tag every chargeable API call with the consuming team, environment, application, and
+      feature so cost can be allocated.
+  - name: Optimization
+    description: Continuously evaluate request patterns, caching, batching, and tier selection to reduce
+      cost per useful unit of work.
+  - name: Accountability
+    description: Establish budget owners and chargeback or showback flows for each consuming team.
+domains:
+  - name: Understand Usage and Cost
+    capabilities:
+      - Data Ingestion
+      - Allocation
+      - Reporting and Analytics
+      - Anomaly Management
+  - name: Quantify Business Value
+    capabilities:
+      - Planning and Estimating
+      - Forecasting
+      - Budgeting
+      - Benchmarking
+      - Unit Economics
+  - name: Optimize Usage and Cost
+    capabilities:
+      - Architecting for Cloud
+      - Rate Optimization
+      - Workload Optimization
+      - Cloud Sustainability
+      - Licensing and SaaS
+  - name: Manage the FinOps Practice
+    capabilities:
+      - FinOps Practice Operations
+      - FinOps Education and Enablement
+      - Invoicing and Chargeback
+      - Onboarding Workloads
+      - Intersecting Disciplines
+billingModel:
+  pricingCategory: Usage-Based
+  billingFrequency: Monthly
+  billingCurrency: USD
+  chargeCategories:
+    - Usage
+    - Purchase
+    - Tax
+    - Credit
+    - Adjustment
+  chargeFrequency: Recurring
+focusColumns:
+  ServiceName: Test-Driven Development
+  ServiceCategory: Developer Tools / API
+  ProviderName: Test-Driven Development
+  PublisherName: Test-Driven Development
+  InvoiceIssuerName: Test-Driven Development
+  PricingCategory: Usage-Based
+  PricingUnit: request
+  BillingCurrency: USD
+  ChargeCategory: Usage
+meters:
+  - name: api_requests
+    description: Count of billable API requests
+    unit: request
+    aggregation: sum
+    dimensions:
+      - api
+      - endpoint
+      - tier
+      - region
+      - consumer
+  - name: data_egress
+    description: Bytes returned over the network in API responses
+    unit: GB
+    aggregation: sum
+    dimensions:
+      - api
+      - region
+      - consumer
+  - name: compute_seconds
+    description: Server-side compute consumed by the request, where applicable
+    unit: second
+    aggregation: sum
+    dimensions:
+      - api
+      - endpoint
+      - tier
+apis:
+  - name: GitHub Actions API
+    baseURL: https://api.github.com
+    tags:
+      - CI/CD
+      - Continuous Integration
+      - GitHub
+      - Test Automation
+    serviceName: GitHub Actions API
+    serviceCategory: API
+  - name: CircleCI API
+    baseURL: https://circleci.com/api/v2
+    tags:
+      - CI/CD
+      - Continuous Integration
+      - Pipelines
+      - Test Automation
+    serviceName: CircleCI API
+    serviceCategory: API
+  - name: Jenkins API
+    baseURL: https://your-jenkins.example.com
+    tags:
+      - Automation
+      - Build Management
+      - CI/CD
+      - Continuous Integration
+    serviceName: Jenkins API
+    serviceCategory: API
+  - name: SonarQube API
+    baseURL: https://your-sonar.example.com/api
+    tags:
+      - Code Coverage
+      - Code Quality
+      - Static Analysis
+      - Testing
+    serviceName: SonarQube API
+    serviceCategory: API
+  - name: Codecov API
+    baseURL: https://api.codecov.io/api/v2
+    tags:
+      - Code Coverage
+      - Reporting
+      - Testing
+    serviceName: Codecov API
+    serviceCategory: API
+  - name: Coveralls API
+    baseURL: https://coveralls.io
+    tags:
+      - Code Coverage
+      - Reporting
+      - Testing
+    serviceName: Coveralls API
+    serviceCategory: API
+unitEconomics:
+  - name: Cost per 1K Requests
+    metric: billed_cost / (api_requests / 1000)
+    target: TBD
+  - name: Cost per Active Consumer
+    metric: billed_cost / active_consumers
+    target: TBD
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
+    url: https://apievangelist.com
