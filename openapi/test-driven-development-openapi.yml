@@ -1,0 +1,143 @@
+openapi: 3.1.0
+info:
+  title: GitHub Actions API (Test-Driven Development)
+  description: >-
+    Subset of the GitHub REST API for managing GitHub Actions workflows and
+    workflow runs in support of test-driven development pipelines, where tests
+    are written first and executed on every pull request and commit via
+    automated CI/CD workflows.
+  version: "2026-03-10"
+  contact:
+    name: GitHub REST API - Actions
+    url: https://docs.github.com/en/rest/actions
+servers:
+  - url: https://api.github.com
+    description: GitHub REST API
+security:
+  - bearerAuth: []
+paths:
+  /repos/{owner}/{repo}/actions/workflows:
+    get:
+      summary: List repository workflows
+      operationId: listWorkflows
+      parameters:
+        - $ref: '#/components/parameters/Owner'
+        - $ref: '#/components/parameters/Repo'
+      responses:
+        '200':
+          description: Workflows listed.
+  /repos/{owner}/{repo}/actions/workflows/{workflow_id}:
+    get:
+      summary: Get a workflow
+      operationId: getWorkflow
+      parameters:
+        - $ref: '#/components/parameters/Owner'
+        - $ref: '#/components/parameters/Repo'
+        - name: workflow_id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Workflow returned.
+  /repos/{owner}/{repo}/actions/workflows/{workflow_id}/dispatches:
+    post:
+      summary: Trigger a workflow run via workflow_dispatch
+      operationId: dispatchWorkflow
+      parameters:
+        - $ref: '#/components/parameters/Owner'
+        - $ref: '#/components/parameters/Repo'
+        - name: workflow_id
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                ref:
+                  type: string
+                inputs:
+                  type: object
+      responses:
+        '204':
+          description: Workflow dispatched.
+  /repos/{owner}/{repo}/actions/runs:
+    get:
+      summary: List workflow runs for a repository
+      operationId: listWorkflowRuns
+      parameters:
+        - $ref: '#/components/parameters/Owner'
+        - $ref: '#/components/parameters/Repo'
+      responses:
+        '200':
+          description: Runs listed.
+  /repos/{owner}/{repo}/actions/runs/{run_id}:
+    get:
+      summary: Get a workflow run
+      operationId: getWorkflowRun
+      parameters:
+        - $ref: '#/components/parameters/Owner'
+        - $ref: '#/components/parameters/Repo'
+        - name: run_id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: Run returned.
+  /repos/{owner}/{repo}/actions/runs/{run_id}/rerun:
+    post:
+      summary: Re-run a workflow
+      operationId: rerunWorkflowRun
+      parameters:
+        - $ref: '#/components/parameters/Owner'
+        - $ref: '#/components/parameters/Repo'
+        - name: run_id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        '201':
+          description: Re-run created.
+  /repos/{owner}/{repo}/actions/runs/{run_id}/cancel:
+    post:
+      summary: Cancel a workflow run
+      operationId: cancelWorkflowRun
+      parameters:
+        - $ref: '#/components/parameters/Owner'
+        - $ref: '#/components/parameters/Repo'
+        - name: run_id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        '202':
+          description: Cancellation accepted.
+components:
+  parameters:
+    Owner:
+      name: owner
+      in: path
+      required: true
+      schema:
+        type: string
+    Repo:
+      name: repo
+      in: path
+      required: true
+      schema:
+        type: string
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: GitHub token
