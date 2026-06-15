@@ -1,0 +1,206 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "GitHub Actions API (Test-Driven Development)",
+    "version": "2026-03-10"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "List repository workflows",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://api.github.com/repos/:owner/:repo/actions/workflows",
+        "params": [
+          {
+            "name": "owner",
+            "value": "",
+            "type": "path"
+          },
+          {
+            "name": "repo",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "List repository workflows"
+    },
+    {
+      "info": {
+        "name": "Get a workflow",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://api.github.com/repos/:owner/:repo/actions/workflows/:workflow_id",
+        "params": [
+          {
+            "name": "owner",
+            "value": "",
+            "type": "path"
+          },
+          {
+            "name": "repo",
+            "value": "",
+            "type": "path"
+          },
+          {
+            "name": "workflow_id",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Get a workflow"
+    },
+    {
+      "info": {
+        "name": "Trigger a workflow run via workflow_dispatch",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "https://api.github.com/repos/:owner/:repo/actions/workflows/:workflow_id/dispatches",
+        "params": [
+          {
+            "name": "owner",
+            "value": "",
+            "type": "path"
+          },
+          {
+            "name": "repo",
+            "value": "",
+            "type": "path"
+          },
+          {
+            "name": "workflow_id",
+            "value": "",
+            "type": "path"
+          }
+        ],
+        "body": {
+          "type": "json",
+          "data": "{}"
+        }
+      },
+      "docs": "Trigger a workflow run via workflow_dispatch"
+    },
+    {
+      "info": {
+        "name": "List workflow runs for a repository",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://api.github.com/repos/:owner/:repo/actions/runs",
+        "params": [
+          {
+            "name": "owner",
+            "value": "",
+            "type": "path"
+          },
+          {
+            "name": "repo",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "List workflow runs for a repository"
+    },
+    {
+      "info": {
+        "name": "Get a workflow run",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://api.github.com/repos/:owner/:repo/actions/runs/:run_id",
+        "params": [
+          {
+            "name": "owner",
+            "value": "",
+            "type": "path"
+          },
+          {
+            "name": "repo",
+            "value": "",
+            "type": "path"
+          },
+          {
+            "name": "run_id",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Get a workflow run"
+    },
+    {
+      "info": {
+        "name": "Re-run a workflow",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "https://api.github.com/repos/:owner/:repo/actions/runs/:run_id/rerun",
+        "params": [
+          {
+            "name": "owner",
+            "value": "",
+            "type": "path"
+          },
+          {
+            "name": "repo",
+            "value": "",
+            "type": "path"
+          },
+          {
+            "name": "run_id",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Re-run a workflow"
+    },
+    {
+      "info": {
+        "name": "Cancel a workflow run",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "https://api.github.com/repos/:owner/:repo/actions/runs/:run_id/cancel",
+        "params": [
+          {
+            "name": "owner",
+            "value": "",
+            "type": "path"
+          },
+          {
+            "name": "repo",
+            "value": "",
+            "type": "path"
+          },
+          {
+            "name": "run_id",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Cancel a workflow run"
+    }
+  ],
+  "bundled": true
+}
