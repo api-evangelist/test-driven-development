@@ -89,6 +89,14 @@ apis:
       - type: Documentation
         url: https://docs.coveralls.io
 common:
+  - type: TrustCenter
+    url: security/test-driven-development-trust-center.yml
+  - type: VulnerabilityDisclosure
+    url: security/test-driven-development-vulnerability-disclosure.yml
+  - type: DomainSecurity
+    url: security/test-driven-development-domain-security.yml
+  - type: Authentication
+    url: authentication/test-driven-development-authentication.yml
   - type: Documentation
     url: https://en.wikipedia.org/wiki/Test-driven_development
   - type: Documentation
