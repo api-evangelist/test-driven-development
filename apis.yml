@@ -89,6 +89,8 @@ apis:
       - type: Documentation
         url: https://docs.coveralls.io
 common:
+  - type: AgenticAccess
+    url: agentic-access/test-driven-development-agentic-access.yml
   - type: TrustCenter
     url: security/test-driven-development-trust-center.yml
   - type: VulnerabilityDisclosure
