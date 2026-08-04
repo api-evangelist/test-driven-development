@@ -1,0 +1,14 @@
+{
+  "provider": "test-driven-development",
+  "sources": [
+    "test-driven-development-repos-api-openapi.yml"
+  ],
+  "outputs": [
+    "test-driven-development-repos-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
