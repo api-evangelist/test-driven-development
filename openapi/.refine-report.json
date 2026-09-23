@@ -1,7 +1,7 @@
 {
   "provider": "test-driven-development",
   "sources": [
-    "test-driven-development-repos-api-openapi.yml"
+    "_original/test-driven-development-openapi.yml"
   ],
   "outputs": [
     "test-driven-development-repos-api-openapi.yml"
@@ -10,8 +10,19 @@
   "errors": [],
   "warnings": [],
   "notes": [
-    "test-driven-development-repos-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "test-driven-development-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "test-driven-development-openapi.yml: tagged paths GET /repos/{owner}/{repo}/actions/workflows -> Repos",
+    "test-driven-development-openapi.yml: tagged paths GET /repos/{owner}/{repo}/actions/workflows/{workflow_id} -> Repos",
+    "test-driven-development-openapi.yml: tagged paths POST /repos/{owner}/{repo}/actions/workflows/{workflow_id}/dispatches -> Repos",
+    "test-driven-development-openapi.yml: tagged paths GET /repos/{owner}/{repo}/actions/runs -> Repos",
+    "test-driven-development-openapi.yml: tagged paths GET /repos/{owner}/{repo}/actions/runs/{run_id} -> Repos",
+    "test-driven-development-openapi.yml: tagged paths POST /repos/{owner}/{repo}/actions/runs/{run_id}/rerun -> Repos",
+    "test-driven-development-openapi.yml: tagged paths POST /repos/{owner}/{repo}/actions/runs/{run_id}/cancel -> Repos",
+    "test-driven-development-openapi.yml: declared missing tag: Repos",
     "apis.yml register: already-registered"
   ],
-  "skipped": []
+  "skipped": [
+    "test-driven-development-repos-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }
