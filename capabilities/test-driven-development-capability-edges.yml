@@ -1,0 +1,25 @@
+slug: test-driven-development
+provider: Test-Driven Development
+generated_by: planning/capability-mapping/scripts/classify_capabilities.py
+model: claude-opus-5
+frame:
+- Software & Technology
+min_confidence: 0.7
+capability_model:
+  source: https://github.com/vincentmakes/turbo-ea-capabilities
+  license: CC-BY-4.0
+  attribution: Turbo EA Capabilities by Vincent Verdet — Turbo EA, https://github.com/vincentmakes/turbo-ea-capabilities,
+    CC BY 4.0
+  notice: NOTICE
+edge_count: 1
+edges:
+- tag: Repos
+  spec_file: test-driven-development-repos-api-openapi.yml
+  capability_id: BC-4210.10
+  capability_id_l1: BC-4210
+  capability_name: Continuous Integration Management
+  confidence: 0.8
+  evidence: POST /repos/{owner}/{repo}/actions/workflows/{workflow_id}/dispatches 'Trigger a workflow
+    run via workflow_dispatch'; 'executed on every pull request and commit via automated CI/CD workflows'
+  reason: Operations list, trigger, re-run and cancel GitHub Actions CI workflow runs — build-pipeline
+    management, i.e. Continuous Integration Management.

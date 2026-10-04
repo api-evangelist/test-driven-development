@@ -117,6 +117,9 @@ apis:
   - type: Documentation
     url: https://circleci.com/docs/api/v2/
 common:
+  - type: CapabilityMap
+    url: capabilities/test-driven-development-capability-edges.yml
+    name: Test-Driven Development Business Capability Map
   - type: AgenticAccess
     url: agentic-access/test-driven-development-agentic-access.yml
   - type: TrustCenter
