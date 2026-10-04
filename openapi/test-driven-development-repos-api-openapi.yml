@@ -136,14 +136,14 @@ paths:
       - Repos
 components:
   parameters:
-    Repo:
-      name: repo
+    Owner:
+      name: owner
       in: path
       required: true
       schema:
         type: string
-    Owner:
-      name: owner
+    Repo:
+      name: repo
       in: path
       required: true
       schema:
