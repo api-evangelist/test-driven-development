@@ -44,7 +44,7 @@ tags:
   - Software Development
   - Testing
 created: '2025'
-modified: '2026-05-03'
+modified: '2026-10-06'
 apis:
 - name: Jenkins API
   description: >-
@@ -117,6 +117,8 @@ apis:
   - type: Documentation
     url: https://circleci.com/docs/api/v2/
 common:
+  - url: https://www.jenkins.io/rss.xml
+    type: BlogRSS
   - type: CapabilityMap
     url: capabilities/test-driven-development-capability-edges.yml
     name: Test-Driven Development Business Capability Map
