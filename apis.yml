@@ -117,6 +117,12 @@ apis:
   - type: Documentation
     url: https://circleci.com/docs/api/v2/
 common:
+  - type: Plans
+    url: plans/test-driven-development-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/test-driven-development-rate-limits.yml
+  - type: FinOps
+    url: finops/test-driven-development-finops.yml
   - url: https://www.jenkins.io/rss.xml
     type: BlogRSS
   - type: CapabilityMap
